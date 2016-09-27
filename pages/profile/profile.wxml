@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+<button type="primary" size="default"
+         bindtap="location"> 查看我的位置 </button>
+</view>
