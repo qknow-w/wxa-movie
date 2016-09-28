@@ -1,0 +1,3 @@
+<view class="video">
+  <video src="../../resources/1.mp4" binderror="videoErrorCallback"></video>
+</view>

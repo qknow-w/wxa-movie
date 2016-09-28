@@ -7,9 +7,9 @@
 }
 
 .poster {
-  width: 80%;
-  height: 80%;
+  height: 700rpx;
   margin: 20rpx;
+
 }
 
 .title {
@@ -37,4 +37,10 @@
   color: #666;
   font-size: 20rpx;
   padding: 10rpx
+}
+.bf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
