@@ -1,3 +1,5 @@
+const Q = require("utils/q.js");
+
 // 创建应用程序对象
 App({
   // ========== 全局数据对象（整个应用程序共享） ==========
@@ -19,6 +21,23 @@ App({
         callback(e)
       }
     })
+  },
+
+  //return promise
+  fetchApiPromise (url) {
+    let def = Q.defer();
+    wx.request({
+      url,
+      data: {},
+      header: { 'Content-Type': 'application/json' },
+      success (res) {
+        def.resolve( res.data)
+      },
+      fail (e) {
+        def.reject(e)
+      }
+    })
+    return def.promise;
   },
 
   //生命周期
